@@ -147,23 +147,47 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#050505] text-white">
-      {/* Top Floating Navbar */}
+      {/* Top Floating Navbar with GitHub & LinkedIn Links */}
       <header className="fixed top-5 inset-x-0 z-50 flex justify-center px-4 pointer-events-auto">
-        <nav className="flex items-center gap-1 md:gap-2 px-4 py-2 rounded-full border border-zinc-700 bg-zinc-950/90 backdrop-blur-md shadow-2xl">
+        <nav className="flex items-center gap-1 sm:gap-2 px-4 py-2 rounded-full border border-zinc-700 bg-zinc-950/90 backdrop-blur-md shadow-2xl">
           <span className="text-xs font-black uppercase tracking-wider text-emerald-400 px-2 font-mono">
             Subham.
           </span>
-          <div className="h-3 w-px bg-zinc-800 mx-1" />
-          <div className="flex items-center gap-1">
+          <div className="h-3 w-px bg-zinc-800 mx-0.5" />
+          
+          {/* Main Navigation Items */}
+          <div className="flex items-center gap-0.5 sm:gap-1">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-[11px] font-mono uppercase px-2.5 py-1 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all"
+                className="text-[11px] font-mono uppercase px-2 sm:px-2.5 py-1 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all"
               >
                 {item.label}
               </a>
             ))}
+          </div>
+
+          <div className="hidden md:block h-3 w-px bg-zinc-800 mx-1" />
+
+          {/* Quick Header Socials */}
+          <div className="hidden md:flex items-center gap-1 font-mono text-[11px]">
+            <a
+              href="https://github.com/Subham9798"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-emerald-400 px-2 py-0.5 rounded-full hover:bg-zinc-900 transition-colors"
+            >
+              GH ↗
+            </a>
+            <a
+              href="https://linkedin.com/in/subham-kumar-singh-97br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-emerald-400 px-2 py-0.5 rounded-full hover:bg-zinc-900 transition-colors"
+            >
+              IN ↗
+            </a>
           </div>
         </nav>
       </header>
@@ -174,25 +198,31 @@ export default function Home() {
       {/* 2. Main Content Wrapper */}
       <div className="w-full max-w-7xl mx-auto px-6 md:px-20 py-16 space-y-24">
         
-        {/* Professional Summary Section With Photo Card & Status */}
+        {/* Professional Summary Section With Glowing Animated Border Photo */}
         <section id="about" className="pt-2">
           <div className="rounded-3xl border border-zinc-800/80 bg-zinc-950/80 backdrop-blur-md p-8 md:p-12 shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
               
-              {/* Left Photo Card */}
+              {/* Left Photo Card with Rotating Light Effect */}
               <div className="md:col-span-4 flex flex-col items-center">
-                <div className="relative w-64 h-72 rounded-2xl overflow-hidden border border-zinc-700/80 bg-zinc-900 shadow-2xl">
-                  <Image
-                    src="/profile.jpg"
-                    alt="Subham Kumar Singh"
-                    fill
-                    unoptimized
-                    priority
-                    className="object-cover object-top"
-                    style={{
-                      filter: "brightness(1.08) contrast(1.12) saturate(0.82) hue-rotate(-8deg)",
-                    }}
-                  />
+                <div className="relative w-64 h-72 rounded-2xl p-[2px] overflow-hidden group shadow-2xl">
+                  {/* Rotating Conic Gradient Beam */}
+                  <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#fff_360deg)] animate-[spin_4s_linear_infinite]" />
+                  
+                  {/* Inner Image Container */}
+                  <div className="relative w-full h-full rounded-[14px] overflow-hidden bg-zinc-900">
+                    <Image
+                      src="/profile.jpg"
+                      alt="Subham Kumar Singh"
+                      fill
+                      unoptimized
+                      priority
+                      className="object-cover object-top"
+                      style={{
+                        filter: "brightness(1.08) contrast(1.12) saturate(0.82) hue-rotate(-8deg)",
+                      }}
+                    />
+                  </div>
                 </div>
                 <div className="mt-4 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-zinc-300">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -549,22 +579,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Large Name Text: Distinct High-Contrast Colors */}
+        {/* Large Name Text */}
         <div className="pt-10 pb-4 text-center select-none overflow-hidden relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-20 bg-gradient-to-r from-cyan-500/15 via-emerald-500/15 to-rose-500/15 blur-[80px] pointer-events-none" />
           
           <h2 className="relative flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider leading-tight">
-            {/* SUBHAM: Electric Cyan */}
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_8px_20px_rgba(6,182,212,0.35)] hover:brightness-125 transition-all">
               SUBHAM
             </span>
-
-            {/* KUMAR: Emerald Green */}
             <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent drop-shadow-[0_8px_20px_rgba(16,185,129,0.35)] hover:brightness-125 transition-all">
               KUMAR
             </span>
-
-            {/* SINGH: Sunset Violet Rose */}
             <span className="bg-gradient-to-r from-fuchsia-500 to-rose-400 bg-clip-text text-transparent drop-shadow-[0_8px_20px_rgba(244,63,94,0.35)] hover:brightness-125 transition-all">
               SINGH
             </span>
