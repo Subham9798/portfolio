@@ -57,8 +57,8 @@ export default function Home() {
     {
       degree: "Intermediate (12th), Science",
       institution: "M.S. College, Mairwa",
-      board: "Passed",
-      period: "Passed",
+      board: "BSEB",
+      period: "2020 — 2022",
       score: "Science Stream",
       location: "Mairwa, Bihar",
       highlight: "Higher Secondary Education in Science",
@@ -66,8 +66,8 @@ export default function Home() {
     {
       degree: "High School (10th)",
       institution: "R.K.N.I.C. School, Ballia",
-      board: "Passed",
-      period: "Passed",
+      board: "UP Board",
+      period: "2018 — 2020",
       score: "Matriculation",
       location: "Ballia, U.P.",
       highlight: "Foundational Secondary Schooling",
@@ -206,10 +206,8 @@ export default function Home() {
               {/* Left Photo Card with Rotating Light Effect */}
               <div className="md:col-span-4 flex flex-col items-center">
                 <div className="relative w-64 h-72 rounded-2xl p-[2px] overflow-hidden group shadow-2xl">
-                  {/* Rotating Conic Gradient Beam */}
                   <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#fff_360deg)] animate-[spin_4s_linear_infinite]" />
                   
-                  {/* Inner Image Container */}
                   <div className="relative w-full h-full rounded-[14px] overflow-hidden bg-zinc-900">
                     <Image
                       src="/profile.jpg"
@@ -283,10 +281,8 @@ export default function Home() {
                 key={group.category} 
                 className="relative rounded-3xl p-[1.5px] overflow-hidden group shadow-lg"
               >
-                {/* Shining Rotating Conic Beam */}
                 <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#10b981_360deg)] animate-[spin_6s_linear_infinite]" />
                 
-                {/* Inner Card Layer */}
                 <div className="relative w-full h-full rounded-[22px] bg-zinc-950 p-6 flex flex-col justify-between">
                   <div>
                     <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider">
@@ -307,12 +303,9 @@ export default function Home() {
               </div>
             ))}
 
-            {/* Key Academic Coursework Card With Shining Rotating Border */}
             <div className="relative rounded-3xl p-[1.5px] overflow-hidden group shadow-lg md:col-span-2">
-              {/* Shining Rotating Conic Beam */}
               <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#06b6d4_360deg)] animate-[spin_8s_linear_infinite]" />
 
-              {/* Inner Card Layer */}
               <div className="relative w-full h-full rounded-[22px] bg-zinc-950 p-6">
                 <span className="text-[11px] font-mono text-cyan-400 uppercase tracking-wider">
                   Key Academic Coursework
@@ -332,7 +325,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Flagship Project: AgriVision XAI */}
+        {/* Flagship Project: AgriVision XAI with Rotating Glowing Border */}
         <section id="projects" className="border-t border-zinc-900 pt-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800 pb-6 mb-10">
             <div>
@@ -346,64 +339,68 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative rounded-3xl border border-zinc-800 bg-gradient-to-b from-zinc-900/60 to-black p-8 md:p-12 overflow-hidden shadow-2xl">
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-              <div className="flex items-center gap-3">
-                <span className="px-3 py-1 text-[11px] font-mono rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">
-                  Final Year Project • Supervised by Asst. Prof. Debesh Kumar Shandilya
-                </span>
-                <span className="text-xs font-mono text-zinc-500">Jan — May 2026</span>
-              </div>
-              <a
-                href="https://github.com/Subham9798"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono text-zinc-400 hover:text-white transition-colors"
-              >
-                GitHub Source ↗
-              </a>
-            </div>
+          <div className="relative rounded-3xl p-[2px] overflow-hidden group shadow-2xl">
+            <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_280deg,#10b981_320deg,#06b6d4_360deg)] animate-[spin_8s_linear_infinite]" />
 
-            <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-4">
-              Crop Disease Detection & Real-time Diagnostic Pipeline
-            </h3>
-
-            <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-3xl mb-8">
-              Built using Python, Vision Transformer (ViT), Explainable AI (XAI), CNN, React.js, and MySQL. Presented as Final Year Project at Dept. of CSE (AI & ML), GEC Jamui.
-            </p>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800/80">
-                <div className="text-2xl md:text-3xl font-black text-emerald-400 font-mono">99.28%</div>
-                <div className="text-xs text-zinc-400 uppercase tracking-wider mt-1">Validation Accuracy</div>
+            <div className="relative w-full h-full rounded-[22px] bg-gradient-to-b from-zinc-950 via-[#070707] to-black p-8 md:p-12 overflow-hidden">
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="px-3 py-1 text-[11px] font-mono rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">
+                    Final Year Project • Supervised by Asst. Prof. Debesh Kumar Shandilya
+                  </span>
+                  <span className="text-xs font-mono text-zinc-500">Jan — May 2026</span>
+                </div>
+                <a
+                  href="https://github.com/Subham9798"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-zinc-400 hover:text-white transition-colors"
+                >
+                  GitHub Source ↗
+                </a>
               </div>
-              <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800/80">
-                <div className="text-2xl md:text-3xl font-black text-white font-mono">38</div>
-                <div className="text-xs text-zinc-400 uppercase tracking-wider mt-1">Disease Classes</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800/80">
-                <div className="text-xl md:text-2xl font-black text-white font-mono">ViT + CNN</div>
-                <div className="text-xs text-zinc-400 uppercase tracking-wider mt-1">Architecture</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800/80">
-                <div className="text-xl md:text-2xl font-black text-emerald-400 font-mono">XAI Layer</div>
-                <div className="text-xs text-zinc-400 uppercase tracking-wider mt-1">Leaf Explainability</div>
-              </div>
-            </div>
 
-            <ul className="space-y-2 text-xs md:text-sm text-zinc-300 font-mono list-disc list-inside mb-8">
-              <li>Achieved 99.28% validation accuracy across 38 plant disease classes using Vision Transformer (ViT) with XAI trained on PlantVillage and PlantDoc datasets.</li>
-              <li>Built farmer-facing web app: upload crop image → instant disease detection → treatment solutions PDF report download.</li>
-              <li>Integrated AI chatbot for real-time farming queries and weather forecasting.</li>
-              <li>XAI explainability layer highlights which part of the leaf is diseased making AI transparent and trustworthy.</li>
-            </ul>
+              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-4">
+                Crop Disease Detection & Real-time Diagnostic Pipeline
+              </h3>
 
-            <div className="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60 text-xs font-mono">
-              {["Python", "Vision Transformer (ViT)", "Explainable AI (XAI)", "CNN", "React.js", "MySQL", "PlantDoc"].map((t) => (
-                <span key={t} className="px-3 py-1 rounded-md bg-zinc-800/60 text-zinc-300">
-                  {t}
-                </span>
-              ))}
+              <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-3xl mb-8">
+                Built using Python, Vision Transformer (ViT), Explainable AI (XAI), CNN, React.js, and MySQL. Presented as Final Year Project at Dept. of CSE (AI & ML), GEC Jamui.
+              </p>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div className="p-4 rounded-2xl bg-zinc-900/60 border border-emerald-500/30 hover:border-emerald-500 transition-colors">
+                  <div className="text-2xl md:text-3xl font-black text-emerald-400 font-mono">99.28%</div>
+                  <div className="text-xs text-zinc-400 uppercase tracking-wider mt-1">Validation Accuracy</div>
+                </div>
+                <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 transition-colors">
+                  <div className="text-2xl md:text-3xl font-black text-white font-mono">38</div>
+                  <div className="text-xs text-zinc-400 uppercase tracking-wider mt-1">Disease Classes</div>
+                </div>
+                <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 transition-colors">
+                  <div className="text-xl md:text-2xl font-black text-white font-mono">ViT + CNN</div>
+                  <div className="text-xs text-zinc-400 uppercase tracking-wider mt-1">Architecture</div>
+                </div>
+                <div className="p-4 rounded-2xl bg-zinc-900/60 border border-cyan-500/30 hover:border-cyan-500 transition-colors">
+                  <div className="text-xl md:text-2xl font-black text-cyan-400 font-mono">XAI Layer</div>
+                  <div className="text-xs text-zinc-400 uppercase tracking-wider mt-1">Leaf Explainability</div>
+                </div>
+              </div>
+
+              <ul className="space-y-2 text-xs md:text-sm text-zinc-300 font-mono list-disc list-inside mb-8">
+                <li>Achieved 99.28% validation accuracy across 38 plant disease classes using Vision Transformer (ViT) with XAI trained on PlantVillage and PlantDoc datasets.</li>
+                <li>Built farmer-facing web app: upload crop image → instant disease detection → treatment solutions PDF report download.</li>
+                <li>Integrated AI chatbot for real-time farming queries and weather forecasting.</li>
+                <li>XAI explainability layer highlights which part of the leaf is diseased making AI transparent and trustworthy.</li>
+              </ul>
+
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60 text-xs font-mono">
+                {["Python", "Vision Transformer (ViT)", "Explainable AI (XAI)", "CNN", "React.js", "MySQL", "PlantDoc"].map((t) => (
+                  <span key={t} className="px-3 py-1 rounded-md bg-zinc-800/60 text-zinc-300">
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -440,7 +437,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Education */}
+        {/* Education Clean Restored Card Style (No Shining Border & Neutral Gray Dates) */}
         <section id="education" className="border-t border-zinc-900 pt-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800 pb-6 mb-10">
             <div>
