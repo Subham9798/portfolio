@@ -30,15 +30,15 @@ export default function HeroScrub() {
         // 0.1 ARCHITECTURAL RUNTIME
       </div>
 
-      {/* Symmetrical 4-4-4 Grid */}
+      {/* Symmetrical Balanced Grid */}
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 items-center gap-6 lg:gap-8 z-10">
         
-        {/* Left: HI, I'M SUBHAM & Large Titles */}
+        {/* Left: HI, I'M SUBHAM & Large Punchy Rotating Titles */}
         <div className="md:col-span-4 flex flex-col justify-center order-2 md:order-1 text-center md:text-left">
-          <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.28em] text-zinc-400 font-mono mb-2">
+          <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400 font-mono mb-2">
             HI, I&apos;M SUBHAM
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[58px] font-black uppercase text-white tracking-tighter leading-[1.02] min-h-[130px] flex items-center justify-center md:justify-start">
+          <h1 className="text-4xl sm:text-5xl lg:text-[56px] xl:text-[62px] font-black uppercase text-white tracking-tighter leading-[0.98] min-h-[140px] flex items-center justify-center md:justify-start">
             {titles[activeTitleIndex]}
           </h1>
         </div>
