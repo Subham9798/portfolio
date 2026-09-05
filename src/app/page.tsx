@@ -263,7 +263,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Technical Skills */}
+        {/* Technical Skills With Shining Rotating Border Cards */}
         <section id="skills" className="border-t border-zinc-900 pt-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800 pb-6 mb-10">
             <div>
@@ -279,38 +279,54 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {skillCategories.map((group) => (
-              <div key={group.category} className="rounded-3xl border border-zinc-800/80 bg-zinc-950 p-6 flex flex-col justify-between">
-                <div>
-                  <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider">
-                    {group.category}
-                  </span>
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {group.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 text-xs font-mono"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+              <div 
+                key={group.category} 
+                className="relative rounded-3xl p-[1.5px] overflow-hidden group shadow-lg"
+              >
+                {/* Shining Rotating Conic Beam */}
+                <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#10b981_360deg)] animate-[spin_6s_linear_infinite]" />
+                
+                {/* Inner Card Layer */}
+                <div className="relative w-full h-full rounded-[22px] bg-zinc-950 p-6 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider">
+                      {group.category}
+                    </span>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {group.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1.5 rounded-xl bg-zinc-900 border border-zinc-800/80 text-zinc-200 text-xs font-mono group-hover:border-zinc-700 transition-colors"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
 
-            <div className="rounded-3xl border border-zinc-800/80 bg-zinc-950 p-6 md:col-span-2">
-              <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider">
-                Key Academic Coursework
-              </span>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {coursework.map((course) => (
-                  <span
-                    key={course}
-                    className="px-3 py-1.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-zinc-300 text-xs font-mono"
-                  >
-                    • {course}
-                  </span>
-                ))}
+            {/* Key Academic Coursework Card With Shining Rotating Border */}
+            <div className="relative rounded-3xl p-[1.5px] overflow-hidden group shadow-lg md:col-span-2">
+              {/* Shining Rotating Conic Beam */}
+              <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#06b6d4_360deg)] animate-[spin_8s_linear_infinite]" />
+
+              {/* Inner Card Layer */}
+              <div className="relative w-full h-full rounded-[22px] bg-zinc-950 p-6">
+                <span className="text-[11px] font-mono text-cyan-400 uppercase tracking-wider">
+                  Key Academic Coursework
+                </span>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {coursework.map((course) => (
+                    <span
+                      key={course}
+                      className="px-3 py-1.5 rounded-xl bg-zinc-900/80 border border-zinc-800/80 text-zinc-300 text-xs font-mono"
+                    >
+                      • {course}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
