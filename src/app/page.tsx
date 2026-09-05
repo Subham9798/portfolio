@@ -3,6 +3,7 @@
 import Image from "next/image";
 import HeroScrub from "@/components/HeroScrub";
 import Preloader from "@/components/Preloader";
+import AIChatbot from "@/components/AIChatbot";
 
 export default function Home() {
   const navItems = [
@@ -150,6 +151,9 @@ export default function Home() {
     <div className="relative min-h-screen bg-[#050505] text-white">
       {/* 0. Fullscreen Boot Preloader */}
       <Preloader />
+
+      {/* AI Assistant Chat Widget */}
+      <AIChatbot />
 
       {/* Top Floating Navbar with GitHub & LinkedIn Links */}
       <header className="fixed top-5 inset-x-0 z-50 flex justify-center px-4 pointer-events-auto">
