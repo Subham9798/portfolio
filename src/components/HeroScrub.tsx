@@ -49,7 +49,7 @@ export default function HeroScrub() {
             {/* Smooth 360-Degree Rotating Beam */}
             <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#fff_360deg)] animate-[spin_4s_linear_infinite]" />
             
-            {/* Inner Image Container */}
+            {/* Inner Image Container (Natural Color Tone - No Yellow Tint) */}
             <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-zinc-950">
               <Image
                 src="/profile.jpg"
@@ -59,7 +59,7 @@ export default function HeroScrub() {
                 priority
                 className="object-cover object-top"
                 style={{
-                  filter: "brightness(1.08) contrast(1.14) saturate(0.80) hue-rotate(-8deg)",
+                  filter: "brightness(1.03) contrast(1.05) saturate(1.0)",
                 }}
               />
             </div>
