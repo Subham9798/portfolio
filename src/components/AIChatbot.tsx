@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function AIChatbot() {
+  const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
@@ -12,6 +13,13 @@ export default function AIChatbot() {
         "SYS_AI initialized. Ask me anything about Subham's skills, projects (AgriVision XAI), or experience!",
     },
   ]);
+
+  // Prevent hydration mismatch caused by browser extensions injecting attributes
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
 
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
